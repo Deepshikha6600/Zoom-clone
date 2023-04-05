@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Zoom</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="up-container">
+        <div class="searchContainer" id="searchDiv">
+          <button id="srchBtn">
+            <svg
+              version="1.1"
+              id="searchGlass"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="30"
+              viewBox="0 0 512 512"
+            >
+              <title></title>
+              <g id="icomoon-ignore"></g>
+              <path
+                d="M496.131 435.698l-121.276-103.147c-12.537-11.283-25.945-16.463-36.776-15.963 28.628-33.534 45.921-77.039 45.921-124.588 0-106.039-85.961-192-192-192s-192 85.961-192 192 85.961 192 192 192c47.549 0 91.054-17.293 124.588-45.922-0.5 10.831 4.68 24.239 15.963 36.776l103.147 121.276c17.661 19.623 46.511 21.277 64.11 3.678s15.946-46.449-3.677-64.11zM192 320c-70.692 0-128-57.308-128-128s57.308-128 128-128 128 57.308 128 128-57.307 128-128 128z"
+              ></path>
+            </svg>
+          </button>
+          <input
+            type="text"
+            id="srchInput"
+            placeholder="Enter search here..."
+          />
+          <button id="clearBtn" onclick="hideSearch()">
+            <img src="./images/crossImg.jpg" alt="" />
+          </button>
+        </div>
+        <button id="searchBtn" onclick="search()">
+          <img src="./images/icon-search.png" alt="" />
+        </button>
+        <ul>
+          <li id="searchText">Search</li>
+          <li>000.800.050.2040</li>
+          <li>1.888.799.9666</li>
+          <li>Request a Demo</li>
+          <li>|</li>
+          <li>Join</li>
+          <li>
+            Host
+            <select class="dropdown">
+              <option class="dropdown-content">With Video Off</option>
+              <option class="dropdown-content">With Video On</option>
+              <option class="dropdown-content">Share Screen only</option>
+            </select>
+          </li>
+          <li>Sign In</li>
+        </ul>
+      </div>
+      <div class="down-container">
+        <ul>
+          <li>
+            <img src="./images/Vector.png" alt="" />
+          </li>
+          <li>
+            <button id="btnNewProducts" data-toggle="dropdown">
+              Products
+              <span id="moveArrow">
+                <img
+                  alt=""
+                  src="https://st1.zoom.us/static/6.3.11147/image/icon/icon-arrow-down-blue.svg"
+                />
+              </span>
+            </button>
+          </li>
+          <li>
+            <button id="btnNewProducts" data-toggle="dropdown">
+              Solutions
+              <span id="moveArrow">
+                <img
+                  alt=""
+                  src="https://st1.zoom.us/static/6.3.11147/image/icon/icon-arrow-down-blue.svg"
+                />
+              </span>
+            </button>
+          </li>
+          <li>
+            <button id="btnNewProducts" data-toggle="dropdown">
+              Resources
+              <span id="moveArrow">
+                <img
+                  alt=""
+                  src="https://st1.zoom.us/static/6.3.11147/image/icon/icon-arrow-down-blue.svg"
+                />
+              </span>
+            </button>
+          </li>
+          <li>
+            <button id="btnNewProducts" data-toggle="dropdown">
+              Plans & Pricing
+            </button>
+          </li>
+        </ul>
+
+        <button class="down-containerBtns sales">Contact Sales</button>
+        <button class="down-containerBtns signUp">Sign Up Free</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="specification">
+        <div class="specificationDisp">
+          <button class="support">
+            <img class="bellIcon" src="./images/bellIcon2.png" alt="" /> New!
+            Consumers want more from customer support
+            <span class="supportPartition">|</span
+            ><span class="scoop"
+              >Get the scoop
+              <img class="rightArrow" src="./images/rightArrow.png" alt=""
+            /></span>
+          </button>
+          <div class="line">
+            <div class="lightLine" id="timeBarInner"></div>
+          </div>
+          <div class="specInner">
+            <h1>
+              One platform <br />
+              to <span id="changeMotto">connect</span>
+            </h1>
+            <p>
+              Bring teams together, reimagine workspaces, engage new <br />
+              audiences, and delight your customers - all on the Zoom <br />
+              platorm you know and love.
+            </p>
+            <button class="planBtn">Plans & Pricing</button>
+            <button class="signUpBtn">
+              Sign Up, It's Free
+              <span id="specMoveArrow">
+                <img alt="" src="./images/rightArrow.png" />
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="specificationImgDiv">
+          <img src="./images/slide1-1.jpg" alt="" class="specificationImg1" />
+          <img
+            src="./images/slide1-2.png"
+            alt=""
+            class="specificationImg2slide1"
+          />
+          <img
+            src="./images/slide1-3.png"
+            alt=""
+            class="specificationImg3slide1"
+          />
+          <img src="./images/slide1-4.jpg" alt="" class="specificationImg4" />
+        </div>
+      </div>
+
+      <div class="solutions">
+        <div class="solLeft">
+          <div class="logoContainer">
+            <img
+              src="./images/a1777fad-6af8-4f66-957e-03e0ea2b23e2.jpg"
+              alt=""
+            />
+          </div>
+          <h1 class="solHeading">
+            Flexible solutions for <br />
+            modern team <br />
+            collaboration
+          </h1>
+        </div>
+
+        <div class="solBtnsRitDiv" id="solBtnsRitDiv">
+          <h1 id="solheadDisp">
+            Flexible solutions for modern team collaboration
+          </h1>
+          <button
+            class="zoomone sol-btn"
+            id="btnZoomone"
+            onclick="showSlides('0')"
+          >
+            <span class="zoomSpan">Zoom </span>One
+          </button>
+          <button
+            class="spaces sol-btn"
+            id="btnSpaces"
+            onclick="showSlides('1')"
+          >
+            <span class="zoomSpan">Zoom </span>Spaces
+          </button>
+          <button
+            class="events sol-btn"
+            id="btnEvents"
+            onclick="showSlides('2')"
+          >
+            <span class="zoomSpan">Zoom </span>Events
+          </button>
+          <button class="contact sol-btn" id="btnCon" onclick="showSlides('3')">
+            <span class="zoomSpan">Zoom </span>Contact Center
+          </button>
+          <button class="dev sol-btn" id="btnDev" onclick="showSlides('4')">
+            <span class="zoomSpan">Zoom </span>Developers
+          </button>
+        </div>
+
+        <div class="carousel">
+          <div class="solRight" id="solRight">
+            <div class="divWrapper">
+              <div class="imageContainer">
+                <div class="imgWrapper"></div>
+                <img src="./images/img1.jpg" alt="" />
+              </div>
+              <div class="innerdiv">
+                <h1 id="solRitHeading">
+                  Unified communication and collaboration platform
+                </h1>
+                <p>
+                  Make meaningful connections with meetings, team chat,
+                  whiteboard, phone, and more in one offering.
+                </p>
+                <div class="prod sol-right">
+                  <div class="listContainer">
+                    <div class="list meet">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M192 144c0-44.183 35.817-80 80-80s80 35.817 80 80c0 44.183-35.817 80-80 80s-80-35.817-80-80zM0 144c0-44.183 35.817-80 80-80s80 35.817 80 80c0 44.183-35.817 80-80 80s-80-35.817-80-80zM384 304v-48c0-17.6-14.4-32-32-32h-320c-17.6 0-32 14.4-32 32v160c0 17.6 14.4 32 32 32h320c17.6 0 32-14.4 32-32v-48l128 80v-224l-128 80zM320 384h-256v-96h256v96z"
+                        ></path>
+                      </svg>
+                      Virtual Meetings
+                    </div>
+
+                    <div class="list chat">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="576"
+                        height="512"
+                        viewBox="0 0 576 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M240 0v0c132.548 0 240 86.957 240 194.224s-107.452 194.224-240 194.224c-12.729 0-25.223-0.81-37.417-2.355-51.553 51.347-111.086 60.554-170.583 61.907v-12.567c32.126-15.677 58-44.233 58-76.867 0-4.553-0.356-9.024-1.015-13.397-54.279-35.607-88.985-89.994-88.985-150.945 0-107.267 107.452-194.224 240-194.224zM498 435.343c0 27.971 18.157 52.449 46 65.886v10.771c-51.563-1.159-98.893-9.051-143.571-53.063-10.57 1.325-21.397 2.020-32.429 2.020-47.735 0-91.704-12.879-126.807-34.52 72.337-0.253 140.63-23.427 192.417-65.336 26.104-21.126 46.697-45.913 61.207-73.674 15.383-29.433 23.183-60.791 23.183-93.203 0-5.224-0.225-10.418-0.629-15.584 36.285 29.967 58.629 70.811 58.629 115.838 0 52.244-30.079 98.861-77.12 129.382-0.571 3.748-0.88 7.58-0.88 11.483z"
+                        ></path>
+                      </svg>
+                      Team Chat
+                    </div>
+
+                    <div class="list voip">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M352 320c-32 32-32 64-64 64s-64-32-96-64-64-64-64-96 32-32 64-64-64-128-96-128-96 96-96 96c0 64 65.75 193.75 128 256s192 128 256 128c0 0 96-64 96-96s-96-128-128-96z"
+                        ></path>
+                      </svg>
+                      VoIP Phone System
+                    </div>
+
+                    <div class="list whiteboard">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M352 64h-64v-32c0-17.6-14.4-32-32-32h-64c-17.602 0-32 14.4-32 32v32h-64v64h256v-64zM256 64h-64v-31.943c0.017-0.019 0.036-0.039 0.057-0.057h63.884c0.021 0.018 0.041 0.038 0.059 0.057v31.943zM416 160v-80c0-8.8-7.2-16-16-16h-32v32h16v64h-96l-96 96v128h-128v-288h16v-32h-32c-8.801 0-16 7.2-16 16v320c0 8.8 7.199 16 16 16h144v96h320v-352h-96zM288 205.255v50.745h-50.745l50.745-50.745zM480 480h-256v-192h96v-96h160v288z"
+                        ></path>
+                      </svg>
+                      Online Whiteboard
+                    </div>
+
+                    <div class="list conv">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="576"
+                        height="512"
+                        viewBox="0 0 576 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M544 64h-512c-17.6 0-32 14.4-32 32v320c0 17.6 14.4 32 32 32h512c17.6 0 32-14.4 32-32v-320c0-17.6-14.4-32-32-32zM320 128h64v64h-64v-64zM416 224v64h-64v-64h64zM224 128h64v64h-64v-64zM320 224v64h-64v-64h64zM128 128h64v64h-64v-64zM224 224v64h-64v-64h64zM64 128h32v64h-32v-64zM64 224h64v64h-64v-64zM96 384h-32v-64h32v64zM384 384h-256v-64h256v64zM512 384h-96v-64h96v64zM512 288h-64v-64h64v64zM512 192h-96v-64h96v64z"
+                        ></path>
+                      </svg>
+                      Conversation <span>intelligence</span>
+                    </div>
+
+                    <div class="list email">
+                      <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                      >
+                        <title></title>
+                        <g id="icomoon-ignore"></g>
+                        <path
+                          d="M464 64h-416c-26.4 0-48 21.6-48 48v320c0 26.4 21.6 48 48 48h416c26.4 0 48-21.6 48-48v-320c0-26.4-21.6-48-48-48zM199.37 275.186l-135.37 105.446v-250.821l135.37 145.375zM88.19 128h335.62l-167.81 126-167.81-126zM204.644 280.849l51.356 55.151 51.355-55.151 105.277 135.151h-313.264l105.276-135.151zM312.63 275.186l135.37-145.375v250.821l-135.37-105.446z"
+                        ></path>
+                      </svg>
+                      Email and Calendar
+                    </div>
+                  </div>
+                  <button id="discoverBtn">Discover Zoom One</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="solRight solRight1">
+            <div class="solRight1Container">
+              <div class="solRight1ImageContainer">
+                <div class="solRight1ImageShadow">
+                  <img src="./images/img2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="innerdiv">
+                <h1 id="solRitHeading " class="solRight1Heading">
+                  Workspace reimagined
+                </h1>
+                <p>Innovative room solutions for every meeting space.</p>
+
+                <div class="listContainer">
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <title></title>
+                    </svg>
+                    Room Systems
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <title></title>
+                    </svg>
+                    Conference Rooms
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    >
+                      <title></title>
+                    </svg>
+                    Workspaces
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="solRight solRight1">
+            <div class="solRight1Container solRight2Container">
+              <div class="solRight1ImageContainer">
+                <div class="solRight1ImageShadow">
+                  <img src="./images/img3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="innerdiv">
+                <h1 id="solRitHeading " class="solRight1Heading">
+                  Elevated experiences
+                </h1>
+                <p>
+                  Solutions to host impactful virtual and hybrid experiences.
+                </p>
+
+                <div class="listContainer">
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Online Webinars
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Single-Session Events
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Event Platform
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Community Events
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="solRight solRight1">
+            <div class="solRight1Container solRight2Container">
+              <div class="solRight1ImageContainer">
+                <div class="solRight1ImageShadow">
+                  <img src="./images/img4.jpg" alt="" />
+                </div>
+              </div>
+              <div class="innerdiv">
+                <h1 id="solRitHeading " class="solRight1Heading">
+                  Modern customer support
+                </h1>
+                <p>
+                  An omnichannel cloud contact center solution optimized for
+                  video.
+                </p>
+
+                <div class="listContainer">
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Cloud Contact Center
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Virtual Agent
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="solRight solRight1">
+            <div class="solRight1Container solRight2Container">
+              <div class="solRight1ImageContainer">
+                <div class="solRight1ImageShadow">
+                  <img src="./images/img5.jpg" alt="" />
+                </div>
+              </div>
+              <div class="innerdiv">
+                <h1 id="solRitHeading " class="solRight1Heading">
+                  Zoom for builders
+                </h1>
+                <p>
+                  Create innovative apps and integrations using Zoom's platform
+                </p>
+
+                <div class="listContainer">
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Marketplace
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    APIs & SDKs
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Apps
+                  </div>
+                  <div class="list">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                    ></svg>
+                    Platform Solutions
+                  </div>
+                </div>
+                <button id="discoverBtn">Discover Zoom One</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="fields-used">
+        <div class="fields-used-inner">
+          <div class="fields-used-disc">
+            <h1>Powering organizations across industries and geographies</h1>
+            <p>
+              Zoom helps consolidate communications, connect people, and <br />
+              collaborate better together in the boardroom, classroom, <br />
+              operating room, and everywhere in between.
+            </p>
+            <button>Explore Industry Solutions</button>
+          </div>
+
+          <div class="fields-used-btns">
+            <button class="fields-used-main-btn" onclick="appearDiv('0')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="576"
+                height="448"
+                viewBox="0 0 576 448"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M443.5 209l4.5 79c2 35.25-71.75 64-160 64s-162-28.75-160-64l4.5-79 143.5 45.25c4 1.25 8 1.75 12 1.75s8-0.5 12-1.75zM576 128c0 3.5-2.25 6.5-5.5 7.75l-280 88c-1 0.25-1.75 0.25-2.5 0.25s-1.5 0-2.5-0.25l-163-51.5c-14.25 11.25-24.25 38.75-26.25 72.5 9.5 5.5 15.75 15.5 15.75 27.25 0 11.25-5.75 21-14.5 26.75l14.5 108.25c0.25 2.25-0.5 4.5-2 6.25s-3.75 2.75-6 2.75h-48c-2.25 0-4.5-1-6-2.75s-2.25-4-2-6.25l14.5-108.25c-8.75-5.75-14.5-15.5-14.5-26.75 0-12 6.75-22.25 16.25-27.75 1.5-29.25 9-60.75 24.5-82.5l-83.25-26c-3.25-1.25-5.5-4.25-5.5-7.75s2.25-6.5 5.5-7.75l280-88c1-0.25 1.75-0.25 2.5-0.25s1.5 0 2.5 0.25l280 88c3.25 1.25 5.5 4.25 5.5 7.75z"
+                ></path>
+              </svg>
+              Education
+            </button>
+            <button class="fields-used-main-btn" onclick="appearDiv('1')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 512 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M240 32c-132.548 0-240 107.452-240 240s107.452 240 240 240c132.549 0 240-107.451 240-240s-107.451-240-240-240zM240 464c-106.039 0-192-85.961-192-192s85.961-192 192-192c106.039 0 192 85.961 192 192s-85.961 192-192 192zM256 256v-64h64v-32h-64v-32h-32v32h-64v128h64v64h-64v32h64v32h32v-32h64.001l-0.001-128h-64zM224 256h-32v-64h32v64zM288.001 352h-32.001v-64h32.001v64z"
+                ></path>
+              </svg>
+              Financial Services
+            </button>
+            <button class="fields-used-main-btn" onclick="appearDiv('2')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="544"
+                height="512"
+                viewBox="0 0 544 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M512 480v-32h-32v-192h32v-32h-96v32h32v192h-96v-192h32v-32h-96v32h32v192h-96v-192h32v-32h-96v32h32v192h-96v-192h32v-32h-96v32h32v192h-32v32h-32v32h544v-32h-32z"
+                ></path>
+                <path d="M256 0h32l256 160v32h-544v-32l256-160z"></path>
+              </svg>
+              Government
+            </button>
+            <button class="fields-used-main-btn" onclick="appearDiv('3')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 512 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M448 128h-96v-64c0-17.6-14.4-32-32-32h-128c-17.6 0-32 14.4-32 32v64h-96c-35.2 0-64 28.8-64 64v256c0 35.2 28.8 64 64 64h384c35.2 0 64-28.8 64-64v-256c0-35.2-28.8-64-64-64zM192 64h128v64h-128v-64zM384 352h-96v96h-64v-96h-96v-64h96v-96h64v96h96v64z"
+                ></path>
+              </svg>
+              Healthcare
+            </button>
+            <button class="fields-used-main-btn" onclick="appearDiv('4')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 512 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path d="M368 16l-112 96 144 96 112-96z"></path>
+                <path d="M256 112l-112-96-144 96 112 96z"></path>
+                <path d="M400 208l112 96-144 80-112-96z"></path>
+                <path d="M256 288l-144-80-112 96 144 80z"></path>
+                <path
+                  d="M364.078 422.785l-108.078-92.639-108.079 92.639-67.921-37.734v46.949l176 80 176-80v-46.949z"
+                ></path>
+              </svg>
+              Manufacturing
+            </button>
+            <button class="fields-used-main-btn" onclick="appearDiv('5')">
+              <svg
+                class="fields-used-main-btn-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="640"
+                height="512"
+                viewBox="0 0 640 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M616 0h-192c-13.2 0-31.637 7.637-40.971 16.971l-238.058 238.058c-9.334 9.334-9.334 24.607 0 33.941l206.059 206.059c9.334 9.334 24.607 9.334 33.941 0l238.059-238.059c9.333-9.333 16.97-27.77 16.97-40.97v-192c0-13.2-10.8-24-24-24zM496 192c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48z"
+                ></path>
+                <path
+                  d="M64 272l272-272h-40c-13.2 0-31.637 7.637-40.971 16.971l-238.058 238.058c-9.334 9.334-9.334 24.607 0 33.941l206.059 206.059c9.334 9.334 24.607 9.334 33.941 0l15.029-15.029-208-208z"
+                ></path>
+              </svg>
+              Retail
+            </button>
+
+            <div class="fields-used-wrapper-div">
+              <img src="./images/industry1.jpg" alt="" id="wrapper-img" />
+              <div class="wrapper-inner">
+                <h1 id="heading">Because learning happens everywhere</h1>
+                <p id="para">
+                  Design remote and hybrid learning environments, empower
+                  teachers and students, and create more equitable educational
+                  opportunities.
+                </p>
+                <button id="wrapper-inner-primary-btn">
+                  <h4 id="btn-text">Zoom for Education</h4>
+                </button>
+                <button id="wrapper-inner-secondary-btn">
+                  <div class="wrapper-inner-circle">89</div>
+                  <h1 id="sec-btn-heading">
+                    of the Top 100 global universities choose Zoom
+                  </h1>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-products">
+        <div class="new-products-left-container">
+          <div class="new-products-left-inner">
+            <h1>What's New at Zoom</h1>
+            <p>
+              Stay up to date on news, learn best <br />
+              practices, and more.
+            </p>
+            <button>Read Our Blog</button>
+          </div>
+          <div class="slide-btn-div">
+            <button id="slide-left-btn" onclick="slideto('l')">
+              <svg
+                id="left-arrow-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 512 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M256 512c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256zM256 48c114.875 0 208 93.125 208 208s-93.125 208-208 208-208-93.125-208-208 93.125-208 208-208z"
+                ></path>
+                <path
+                  d="M334.628 158.628l-45.256-45.256-142.627 142.628 142.628 142.627 45.254-45.254-97.372-97.373z"
+                ></path>
+              </svg>
+            </button>
+            <button id="slide-right-btn" onclick="slideto('r')">
+              <svg
+                id="right-arrow-svg"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 512 512"
+              >
+                <title></title>
+                <g id="icomoon-ignore"></g>
+                <path
+                  d="M256 0c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zM256 464c-114.875 0-208-93.125-208-208s93.125-208 208-208 208 93.125 208 208-93.125 208-208 208z"
+                ></path>
+                <path
+                  d="M177.372 353.372l45.256 45.256 142.627-142.628-142.628-142.627-45.254 45.254 97.372 97.373z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="new-products-right-container">
+          <div class="products-carousel">
+            <div class="products feature product1">
+              <img
+                src="./images/ffb5bd00-c9bd-415d-a9ad-087a40185622.jpg"
+                alt=""
+              />
+              <h1>A Recognized Magic Quadrant Leader!</h1>
+              <p>
+                Zoom named a Leader in the Magic Quadrant for UCaaS, Worldwide
+              </p>
+              <button>Read the report</button>
+            </div>
+            <div class="products feature product2">
+              <img
+                src="./images/e33d3db1-5003-4a7e-a4ef-4c36d34c1a76.jpg"
+                alt=""
+              />
+              <h1>Get Inspired</h1>
+              <p>
+                Did you miss Zoomtopia 2022? We've got you! Get access to the
+                on-demand library to catch every keynote, insight, and special
+                guest.
+              </p>
+              <button>Watch Now</button>
+            </div>
+            <div class="products feature product3">
+              <img
+                src="./images/b5d1a5bd-30ff-407f-8af1-4b78734913ed.jpg"
+                alt=""
+              />
+              <h1>Introducing Zoom Mail And Calender Beta</h1>
+              <p>
+                Bring all your imporatant communication and scheduling
+                activities together in Zoom.
+              </p>
+              <button>Discover Mail & Calander</button>
+            </div>
+            <div class="products feature product4">
+              <img
+                src="./images/a1777fad-6af8-4f66-957e-03e0ea2b23e2.jpg"
+                alt=""
+              />
+              <h1>One platform to connect</h1>
+              <p>
+                Brings team together, reimagine workspaces, engage new
+                audiences, and delight your customers - all on the Zoom platform
+                you know and love.
+              </p>
+              <button>View Plans and Pricing</button>
+            </div>
+            <div class="products feature product5">
+              <img
+                src="./images/ffb5bd00-c9bd-415d-a9ad-087a40185622.jpg"
+                alt=""
+              />
+              <h1>Zoom IQ for Sales</h1>
+              <p>
+                Increases sales productivity, shorten deal cycles and improve
+                revenue predictability with an AI solution that provides
+                actionable insights from your calls and meetings.
+              </p>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories">
+        <h1>Real-world stories of people working better together</h1>
+        <div class="story-container">
+          <div class="story story1">
+            <svg
+              width="120"
+              height="30"
+              viewBox="0 0 120 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M101.087 30H101.712V27.1069H101.722L102.762 30H103.302L104.342 27.1069H104.353V30H104.978V26.2512H104.064L103.056 29.1863H103.045L102.011 26.2512H101.087V30ZM97.6275 26.8181H98.8138V30H99.47V26.8181H100.662V26.2512H97.6275V26.8181ZM90 30L120 0H101.944L71.9444 30H90ZM85.6987 13.065H49.3819C38.3138 13.065 36.3769 13.6519 31.6362 18.3925C27.2025 22.8263 20.0006 30 20.0006 30H35.7325L39.4856 26.2469C41.9531 23.7794 43.2256 23.5238 48.4069 23.5238H75.2406L85.6987 13.065ZM31.1519 16.2531C27.8775 19.3425 20.7531 26.2631 16.9131 30H0C0 30 13.5525 16.4869 21.085 9.0725C28.8456 1.685 32.7144 0 46.9487 0H98.7644L87.545 11.2188H48.0012C37.9994 11.2188 35.7519 11.9119 31.1519 16.2531Z"
+                fill="#EE0000"
+                class="path-white"
+              ></path>
+            </svg>
+            <h2>
+              Formula 1 + Zoom Deliver the Greatest Racing on Earth to More Fans
+            </h2>
+            <div class="to-hover-div">
+              <span>
+                <a href="https://explore.zoom.us/en/customer_stories/formula-1/"
+                  >Read their Stories</a
+                >
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="512"
+                  height="512"
+                  viewBox="0 0 512 512"
+                >
+                  <title></title>
+                  <g id="icomoon-ignore"></g>
+                  <path
+                    d="M256 0c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zM256 464c-114.875 0-208-93.125-208-208s93.125-208 208-208 208 93.125 208 208-93.125 208-208 208z"
+                  ></path>
+                  <path
+                    d="M177.372 353.372l45.256 45.256 142.627-142.628-142.628-142.627-45.254 45.254 97.372 97.373z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="story story2">
+            <svg
+              width="112"
+              height="40"
+              viewBox="0 0 112 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1569_66303)">
+                <path
+                  d="M75.6533 28.9333H75.6266C70.8799 32.2933 65.2799 35.8133 59.2266 39.5199L58.9866 39.6533C58.9604 39.664 58.9371 39.6805 58.9182 39.7016C58.8994 39.7227 58.8856 39.7478 58.8779 39.775C58.8702 39.8022 58.8688 39.8308 58.8737 39.8587C58.8787 39.8865 58.8899 39.9129 58.9065 39.9357C58.9232 39.9586 58.9448 39.9774 58.9697 39.9907C58.9947 40.004 59.0223 40.0114 59.0506 40.0125C59.0789 40.0135 59.107 40.0081 59.1329 39.9967C59.1587 39.9853 59.1817 39.9682 59.1999 39.9466L59.3866 39.8399C64.5333 37.1733 70.4266 33.9999 76.3466 30.7199L76.4533 30.6666C76.1038 30.1307 75.8344 29.5468 75.6533 28.9333ZM106.8 3.70659C99.3333 -4.53341 51.1733 2.87992 30.7199 7.35992L30.2399 7.46659C30.193 7.47868 30.1516 7.5064 30.1225 7.54517C30.0934 7.58395 30.0784 7.63147 30.0799 7.67992C30.0825 7.70401 30.0906 7.72719 30.1034 7.74771C30.1163 7.76824 30.1337 7.78558 30.1542 7.79841C30.1748 7.81125 30.1979 7.81926 30.222 7.82183C30.2461 7.8244 30.2705 7.82147 30.2933 7.81325L30.7733 7.73325C47.7333 4.71992 83.0133 0.533254 90.5866 8.05325C92.9066 10.3466 92.3733 13.3066 89.6799 16.7999C91.1667 17.7713 92.2183 19.2818 92.6133 21.0133C103.093 14.0533 110.133 7.38659 106.8 3.70659Z"
+                  fill="#CC2427"
+                  class="path-white"
+                ></path>
+                <path
+                  d="M35.4667 22.48C34.8818 22.4818 34.3124 22.6684 33.84 23.0133C33.3559 23.417 33.0417 23.9883 32.96 24.6133C32.8 25.44 32.88 26 33.2 26.3733C33.3864 26.5545 33.608 26.6953 33.8512 26.787C34.0943 26.8788 34.3538 26.9195 34.6133 26.9066C35.0174 26.9148 35.4183 26.8328 35.7867 26.6666C36.1423 26.5022 36.4465 26.2441 36.6667 25.92C36.9161 25.5492 37.0884 25.132 37.1733 24.6933C37.3067 23.9466 37.2 23.4133 36.8533 23.04C36.6764 22.852 36.4608 22.7046 36.2214 22.6079C35.982 22.5112 35.7245 22.4676 35.4667 22.48ZM27.1733 32.8266L29.3867 20.3466H33.3867L33.0667 21.9466C33.5047 21.3988 34.0863 20.9833 34.7467 20.7466C35.5686 20.4109 36.4456 20.2301 37.3333 20.2133C38.3733 20.2133 39.0133 20.2666 39.7867 20.6666C40.5199 21.0345 41.0901 21.6618 41.3867 22.4266C41.7009 23.2328 41.775 24.1126 41.6 24.96C41.489 25.6875 41.2337 26.3855 40.849 27.0129C40.4643 27.6403 39.9581 28.1844 39.36 28.6133C38.1333 29.4933 37.04 29.7333 35.4667 29.7333C34.9906 29.7421 34.5154 29.6883 34.0533 29.5733C33.7354 29.5041 33.4297 29.3873 33.1467 29.2266C32.8701 29.0272 32.6194 28.7943 32.4 28.5333L31.6533 32.8266H27.1733ZM73.3333 29.6H68.6933L71.04 16.64L75.5467 16.7466L73.3333 29.6ZM50.1867 20.24L50.5067 18.3466L55.2533 17.3333L54.7467 20.24H57.0933L56.64 22.1333H54.3733L53.0133 29.6H48.4L49.7867 22.1333H48.0533L48.4 20.2666H50.1867V20.24ZM13.2267 26.2666C11.984 26.5447 10.7134 26.6789 9.44002 26.6666C7.28002 26.6666 5.54668 25.6 5.65335 23.6C5.70668 22.2933 7.28002 19.52 11.2267 19.52C12.4768 19.4911 13.7085 19.8245 14.7733 20.48L15.3333 17.2533C13.9103 16.6881 12.3828 16.4335 10.8533 16.5066C5.65335 16.56 0.666684 18.9066 0.0533507 23.7066C-0.559983 28.5066 5.38668 29.8133 8.02668 29.8133C9.54668 29.8133 11.1467 29.7333 12.6133 29.6L13.2267 26.2666ZM63.8133 25.3333L63.04 25.5466L61.2533 25.8666C60.8307 25.9012 60.421 26.0287 60.0533 26.24C59.946 26.3004 59.8541 26.3847 59.7847 26.4865C59.7153 26.5883 59.6704 26.7047 59.6533 26.8266C59.6215 26.945 59.6275 27.0704 59.6705 27.1852C59.7136 27.3 59.7915 27.3984 59.8933 27.4666C60.1333 27.6266 60.5067 27.68 61.04 27.68C61.4366 27.6811 61.8315 27.6273 62.2133 27.52C62.5641 27.4173 62.8906 27.245 63.1733 27.0133C63.3602 26.8493 63.4986 26.6371 63.5733 26.4C63.6858 26.0525 63.7661 25.6955 63.8133 25.3333ZM68.72 22.2666C68.6933 22.72 68.6133 23.1466 68.5067 23.8133L67.68 28.48C67.636 28.6677 67.6569 28.8647 67.7392 29.0391C67.8215 29.2134 67.9604 29.3547 68.1333 29.44V29.6H63.36V28.4C62.6418 28.8273 61.8708 29.159 61.0667 29.3866C60.3177 29.5784 59.5463 29.6681 58.7733 29.6533C57.2533 29.6533 56.3733 29.4933 55.76 28.96C55.1467 28.4266 54.8533 28.0533 54.88 27.3066C54.9305 26.7956 55.1351 26.3121 55.4667 25.92C55.8154 25.5389 56.2431 25.2385 56.72 25.04C57.3218 24.771 57.9596 24.5913 58.6133 24.5066C59.4667 24.3733 60.64 24.24 62.2133 24.1066C62.7413 24.0556 63.2608 23.9392 63.76 23.76C64.08 23.6266 64.2133 23.4933 64.2667 23.2266C64.32 22.96 64.2133 22.48 63.5733 22.3466C61.8667 22 58.6667 22.56 57.0133 22.96L57.8933 20.56C60.0017 20.2247 62.132 20.0464 64.2667 20.0266C67.6533 20.0533 68.7467 21.04 68.72 22.2666ZM41.4667 29.6L43.12 20.2933H47.68L46.0267 29.6H41.4667ZM43.3867 18.16C43.52 17.3866 44.72 16.7733 46.08 16.7733C47.44 16.7733 48.4 17.3866 48.2667 18.16C48.1333 18.9333 46.9333 19.5466 45.5733 19.5466C44.2133 19.5466 43.2533 18.9066 43.3867 18.16ZM22.8 25.3066C22.5514 25.4074 22.2918 25.479 22.0267 25.52L20.2667 25.84C19.8349 25.8707 19.4157 25.9983 19.04 26.2133C18.932 26.2795 18.8401 26.3688 18.7709 26.4749C18.7017 26.581 18.657 26.7011 18.64 26.8266C18.6126 26.944 18.6237 27.067 18.6717 27.1775C18.7198 27.288 18.8022 27.38 18.9067 27.44C19.2475 27.6305 19.6377 27.7141 20.0267 27.68C20.4245 27.6721 20.8194 27.6093 21.2 27.4933C21.5508 27.3906 21.8773 27.2183 22.16 26.9866C22.3469 26.8226 22.4853 26.6105 22.56 26.3733C22.6894 26.0307 22.7702 25.6717 22.8 25.3066ZM27.7067 22.2666C27.68 22.72 27.6 23.12 27.4933 23.8133L26.6667 28.4533C26.6227 28.641 26.6436 28.8381 26.7259 29.0124C26.8082 29.1867 26.9471 29.328 27.12 29.4133V29.6H22.3467V28.4266C21.6221 28.8345 20.8524 29.1567 20.0533 29.3866C19.3145 29.5863 18.552 29.6849 17.7867 29.68C16.24 29.68 15.36 29.52 14.7733 28.9866C14.1867 28.4533 13.84 28.08 13.8667 27.3066C13.924 26.8054 14.1281 26.3323 14.4533 25.9466C14.8005 25.5572 15.2281 25.2478 15.7067 25.04C16.3209 24.7799 16.9663 24.6006 17.6267 24.5066C18.4533 24.3733 19.6267 24.24 21.2 24.1066C21.7329 24.0906 22.2579 23.973 22.7467 23.76C23.0933 23.6266 23.2 23.4933 23.2533 23.2266C23.3067 22.96 23.2 22.48 22.56 22.3466C20.8533 22.0266 17.6533 22.56 16 22.9866L16.88 20.56C18.9885 20.2257 21.1187 20.0475 23.2533 20.0266C26.64 20.0266 27.7333 21.0133 27.7067 22.2666Z"
+                  fill="#013D5B"
+                  class="path-white"
+                ></path>
+                <path
+                  d="M91.8933 23.52L92.9333 23.4133C93.28 23.4133 93.5733 23.4933 93.6 23.8133C93.6266 24.1333 93.2533 25.4133 93.1733 25.76L92.4533 28.88C92.1866 30.16 91.8666 31.4933 91.6 32.56H93.4133L94.4266 27.6C97.5733 24.3467 98.7733 23.28 99.4933 23.28C99.5724 23.2716 99.6524 23.281 99.7274 23.3075C99.8024 23.334 99.8705 23.377 99.9267 23.4332C99.983 23.4895 100.026 23.5576 100.052 23.6326C100.079 23.7076 100.088 23.7876 100.08 23.8667C100.107 24.4267 99.7333 25.7333 99.6266 26.1067L98.56 29.7067C98.3466 30.5333 98.16 31.2533 98.1866 31.7867C98.2133 32.32 98.6933 32.9333 99.3866 32.9333C100.72 32.9333 101.707 31.5467 102.533 30.1867L102.293 29.7333C101.947 30.2667 101.173 31.4667 100.533 31.4667C100.347 31.4667 100.16 31.3333 100.16 31.0133C100.181 30.5146 100.271 30.0211 100.427 29.5467L101.6 25.3067C101.893 24.1333 102.053 23.3867 102.053 22.9867C102.053 22.5867 101.547 21.84 100.853 21.84C99.6533 21.84 98.0533 22.72 94.6933 26.5867H94.64L95.0666 24.6933C95.3066 23.6533 95.52 22.5867 95.7333 21.84C94.4698 22.289 93.1781 22.6542 91.8666 22.9333L91.8933 23.52ZM109.733 23.6267C109.707 22.88 109.333 22.3733 108.56 22.3733C106.693 22.3733 104.72 26.0267 104.373 27.4933C107.413 27.4933 109.813 25.68 109.733 23.6267ZM110.133 29.36L110.48 29.6C109.573 31.44 107.733 32.9333 105.547 32.9333C103.76 32.9333 102.32 31.76 102.24 29.5467C102.08 25.5467 105.84 21.84 108.88 21.84C110.187 21.84 111.413 22.4267 111.467 23.84C111.573 27.0133 107.12 27.9733 104.187 28.0267C104.09 28.4099 104.055 28.8057 104.08 29.2C104.133 30.5333 104.933 31.6267 106.56 31.6267C108.187 31.6267 109.413 30.48 110.133 29.36ZM78.6933 26.7733C78.7733 29.68 80.6133 32.0533 83.0133 32.0533C87.6533 32.0533 89.6266 26.3467 89.4933 22.5333C89.3866 19.6267 87.52 17.2533 85.12 17.2533C81.12 17.2533 78.5333 22.9333 78.6933 26.7733ZM76.24 26.6133C76.0533 21.6533 79.9466 16.5867 85.5733 16.5867C89.36 16.5867 91.8133 19.12 91.9466 22.96C92.1333 28.1867 88.5066 32.9867 82.6133 32.9867C78.8266 32.9867 76.3733 30.48 76.24 26.6133Z"
+                  fill="#013D5B"
+                  class="path-white"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_1569_66303">
+                  <rect width="111.467" height="40" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <h2>
+              A Connected, Collaborative Workforce Drives Innovation at Capital
+              One
+            </h2>
+            <div class="to-hover-div to-hover-div1">
+              <span>
+                <a href="https://explore.zoom.us/en/customer_stories/formula-1/"
+                  >Read their Stories</a
+                >
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="512"
+                  height="512"
+                  viewBox="0 0 512 512"
+                >
+                  <title></title>
+                  <g id="icomoon-ignore"></g>
+                  <path
+                    d="M256 0c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zM256 464c-114.875 0-208-93.125-208-208s93.125-208 208-208 208 93.125 208 208-93.125 208-208 208z"
+                  ></path>
+                  <path
+                    d="M177.372 353.372l45.256 45.256 142.627-142.628-142.628-142.627-45.254 45.254 97.372 97.373z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="story story3">
+            <h1>Forbes</h1>
+            <h2>
+              Zoom Connects Influential Business Leaders and Entrepreneurs to
+              Build Back Better
+            </h2>
+            <div class="to-hover-div to-hover-div2">
+              <span>
+                <a href="https://explore.zoom.us/en/customer_stories/formula-1/"
+                  >Read their Stories</a
+                >
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="512"
+                  height="512"
+                  viewBox="0 0 512 512"
+                >
+                  <title></title>
+                  <g id="icomoon-ignore"></g>
+                  <path
+                    d="M256 0c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zM256 464c-114.875 0-208-93.125-208-208s93.125-208 208-208 208 93.125 208 208-93.125 208-208 208z"
+                  ></path>
+                  <path
+                    d="M177.372 353.372l45.256 45.256 142.627-142.628-142.628-142.627-45.254 45.254 97.372 97.373z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <button>Get Inspired</button>
+      </section>
+
+      <section class="get-started">
+        <h1>Ready to get started?</h1>
+        <div class="get-started-btns">
+          <button id="sin-up-btn">Sign Up, It's Free</button>
+          <button id="plans-btn">Plans &amp; Pricing</button>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
